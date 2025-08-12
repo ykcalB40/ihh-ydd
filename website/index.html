@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Örnek Site</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container inner">
+      <div class="lang-select">
+        <span class="small muted">Bizi takip edin:</span>
+        <div class="socials" aria-hidden="true">
+          <a href="#" title="Facebook">FB</a>
+          <a href="#" title="Instagram">IG</a>
+          <a href="#" title="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="lang-select">
+        <span class="small muted">Dil / Para:</span>
+        <select aria-label="Dil seçimi">
+          <option>Türkçe</option>
+          <option>English</option>
+          <option>العربية</option>
+        </select>
+        <select aria-label="Para birimi">
+          <option>TRY</option>
+          <option>USD</option>
+          <option>EUR</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-main">
+      <div class="logo">
+        <img src="https://placehold.co/80x80/png" alt="Logo placeholder">
+        <div>
+          <h1>Vakıf Kurumu Adı</h1>
+          <div class="small muted">Açıklama</div>
+        </div>
+      </div>
+
+      <nav aria-label="Ana menü">
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="main-nav" id="mobileToggle">☰</button>
+        <ul id="main-nav">
+          <li><a href="#">Kurumsal</a></li>
+          <li><a href="#">Ne Yapıyoruz</a></li>
+          <li><a href="#projects">Projeler</a></li>
+          <li><a href="#news">Haberler</a></li>
+          <li><a href="#contact">İletişim</a></li>
+          <li><a class="donate-btn" href="#donateModal" data-modal>Bağış Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO / Carousel -->
+    <section class="hero" aria-roledescription="carousel">
+      <div class="slides" id="slides">
+        <article class="slide" data-bg="https://placehold.co/1600x900/png">
+          <div class="img" style="background-image: url('https://placehold.co/1600x900/png')" aria-hidden="true"></div>
+          <div class="content" role="group" aria-label="Slide 1">
+            <span class="pill">Slide 1</span>
+            <h2>Açıklama 1</h2>
+            <p>Açıklama 2</p>
+            <div class="cta">
+              <a class="donate-btn" href="#" data-modal>Buton 1</a>
+              <a class="small" href="#">Buton 2</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-bg="https://placehold.co/1600x900/png">
+          <div class="img" style="background-image: url('https://placehold.co/1600x900/png')" aria-hidden="true"></div>
+          <div class="content" role="group" aria-label="Slide 2">
+            <span class="pill">Slide 2</span>
+            <h2>Açıklama 1</h2>
+            <p>Açıklama 2</p>
+            <div class="cta">
+              <a class="donate-btn" href="#" data-modal>Buton 1</a>
+              <a class="small" href="#">Buton 2</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-bg="https://placehold.co/1600x900/png">
+          <div class="img" style="background-image: url('https://placehold.co/1600x900/png')" aria-hidden="true"></div>
+          <div class="content" role="group" aria-label="Slide 3">
+            <span class="pill">Slide 3</span>
+            <h2>Açıklama 1</h2>
+            <p>Açıklama 2</p>
+            <div class="cta">
+              <a class="donate-btn" href="#" data-modal>Buton 1</a>
+              <a class="small" href="#">Buton 2</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="carousel-dots" id="dots" aria-hidden="false"></div>
+    </section>
+
+    <!-- Campaigns / Cards -->
+    <section aria-labelledby="campaignsTitle">
+      <h2 id="campaignsTitle">Kampanyalar</h2>
+      <div class="cards" id="campaigns">
+        <!-- Card 1 -->
+        <article class="card" aria-label="Kampanya 1">
+          <h3>Kampanya 1</h3>
+          <p class="small muted">Açıklama</p>
+          <div style="height:10px"></div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><b style="width:60%"></b></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="small muted">(N)% toplandı (Toplanan / Hedeflenen)</div>
+            <div><a class="donate-btn" href="#donateModal" data-modal>Bağış Yap</a></div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" aria-label="Kampanya 2">
+          <h3>Kampanya 2</h3>
+          <p class="small muted">Açıklama</p>
+          <div style="height:10px"></div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="42"><b style="width:42%"></b></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="small muted">(N)% toplandı (Toplanan / Hedeflenen)</div>
+            <div><a class="donate-btn" href="#donateModal" data-modal>Bağış Yap</a></div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" aria-label="Kampanya 3">
+          <h3>Kampanya 3</h3>
+          <p class="small muted">Açıklama</p>
+          <div style="height:10px"></div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><b style="width:88%"></b></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="small muted">(N)% toplandı (Toplanan / Hedeflenen)</div>
+            <div><a class="donate-btn" href="#donateModal" data-modal>Bağış Yap</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Haberler -->
+    <section id="news" aria-labelledby="newsTitle">
+      <h2 id="newsTitle">Son Haberler</h2>
+      <div class="news-grid" id="newsGrid">
+        <!-- fetch kullanımı yapılma ihtimali için JavaScript'e alındı -->
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section aria-labelledby="statsTitle">
+      <h2 id="statsTitle">İstatistiklerimiz</h2>
+      <div class="stats">
+        <div class="stat" aria-hidden="false">
+          <div class="num" data-target="12345">0</div>
+          <div class="small muted">İstatik 1</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="135">0</div>
+          <div class="small muted">İstatik 2</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="850">0</div>
+          <div class="small muted">İstatik 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs / Accordion -->
+    <section aria-labelledby="programsTitle">
+      <h2 id="programsTitle">Ne Yapıyoruz</h2>
+      <div class="card">
+        <details open>
+          <summary style="font-weight:800">Başlık</summary>
+          <p class="muted">Açıklama</p>
+        </details>
+        <details>
+          <summary style="font-weight:800">Başlık</summary>
+          <p class="muted">Açıklama</p>
+        </details>
+        <details>
+          <summary style="font-weight:800">Başlık</summary>
+          <p class="muted">Açıklama</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact & Newsletter -->
+    <section id="contact" aria-labelledby="contactTitle">
+      <h2 id="contactTitle">Bize Ulaşın</h2>
+      <div class="card" style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+        <div style="flex:1;min-width:240px">
+          <h3>Merkez</h3>
+          <p class="muted">Adres...</p>
+          <p class="muted">Tel: 0 123 456 7898<br>Email: info@example.org</p>
+        </div>
+        <form style="flex:1;min-width:260px" id="newsletterForm" aria-label="Bültene kayıt">
+          <label for="email" class="small muted">E-posta</label>
+          <input id="email" type="email" placeholder="E-posta adresiniz" style="width:100%;padding:12px;border-radius:8px;border:1px solid #e6e6e6;margin-top:6px">
+          <div style="margin-top:12px">
+            <button class="donate-btn" type="submit">Abone Ol</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating donate -->
+  <a class="floating-donate" href="#donateModal" data-modal aria-label="Bağış Yap">Bağış Yap</a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Vakıf Kurumu Adı</h3>
+          <p class="small muted">Açıklama</p>
+        </div>
+        <div>
+          <h4>Hızlı Linkler</h4>
+          <ul class="small" style="padding-left:0;list-style:none">
+            <li><a href="#">Bağış</a></li>
+            <li><a href="#">Projeler</a></li>
+            <li><a href="#">Gönüllü Ol</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <p class="small">Tel: 0212 631 21 21<br>Email: info@example.org</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px" class="small muted">©2025  — Tüm hakları saklıdır</div>
+    </div>
+  </footer>
+
+  <script src = "script.js"></script>
+
+</body>
+</html>
