@@ -39,9 +39,6 @@
         padding: 0 20px
     }
 
-    /* ------------------
-       Topbar / Header
-       ------------------ */
     .topbar {
         background: linear-gradient(90deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
         font-size: 14px
@@ -129,7 +126,7 @@
         background: rgba(0, 0, 0, 0.04)
     }
 
-    .donate-btn {
+    .btn {
         background: var(--brand);
         color: #fff;
         padding: 10px 14px;
@@ -137,11 +134,10 @@
         font-weight: 700
     }
 
-    .donate-btn:hover {
+    .btn:hover {
         background: var(--brand-dark)
     }
 
-    /* Mobile Nav */
     .mobile-toggle {
         display: none;
         border: 0;
@@ -149,9 +145,6 @@
         font-size: 20px
     }
 
-    /* ------------------
-       Hero / Carousel
-       ------------------ */
     .hero {
         position: relative;
         height: 64vh;
@@ -229,9 +222,6 @@
         box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.06)
     }
 
-    /* ------------------
-       Sections
-       ------------------ */
     section {
         padding: 40px 0
     }
@@ -306,7 +296,6 @@
         color: var(--brand)
     }
 
-    /* Footer */
     footer {
         background: #111;
         color: #eee;
@@ -325,7 +314,6 @@
         gap: 20px
     }
 
-    /* Floating donate */
     .floating-donate {
         position: fixed;
         right: 20px;
@@ -338,7 +326,6 @@
         z-index: 60
     }
 
-    /* Responsive */
     @media (max-width:900px) {
         nav ul {
             display: none
@@ -384,7 +371,6 @@
         }
     }
 
-    /* small helpers */
     .muted {
         color: var(--muted)
     }
