@@ -147,7 +147,6 @@
 
     .hero {
         position: relative;
-        height: 64vh;
         min-height: 420px;
         overflow: hidden;
         border-radius: 16px;
@@ -155,9 +154,54 @@
     }
 
     .hero .slides {
-        height: 100%;
+        height: calc(64vh - 18px * 2);
         display: flex;
         transition: transform 0.6s cubic-bezier(.22, .9, .34, 1)
+    }
+
+    .hero .slideButtons {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+
+        border-radius: 12px;
+        background: var(--card);
+    }
+
+    .hero .slideButtons .slideButton {
+        display: flex;
+        height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        font-size: x-large;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        border: solid #CC3B1F 2px;
+
+        border-radius: 10px;
+
+
+        box-shadow: 0px 0px 5px #FF5A38;
+
+        transition: transform 0.3s ease;
+    }
+
+    .slideButton:hover,
+    .slideButton.active {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px #FF5A38;
+    }
+
+    .hero .slideButtons .slideButton .active {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 10px black;
     }
 
     .hero .slide {
@@ -172,6 +216,7 @@
     .hero .slide .img {
         position: absolute;
         inset: 0;
+        background-size: cover;
         background-size: cover;
         background-position: center;
         filter: brightness(0.45)
@@ -236,15 +281,24 @@
     }
 
     .news-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px
+        overflow: hidden;
     }
 
-    .news-grid .news {
+    .newsInside {
         display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 18px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .newsInside .news {
+        display: flex;
+        flex: 0 0 calc(100% / 3);
         flex-direction: column;
-        gap: 12px
+        overflow: hidden;
+        gap: 12px;
+        height: 350px;
     }
 
     .news img {
@@ -252,6 +306,36 @@
         height: 170px;
         object-fit: cover;
         border-radius: 8px
+    }
+
+    .dots {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+        background: var(--card);
+    }
+    .dots .dot {
+        display: flex;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        box-shadow: none;
+        transition: box-shadow 3s ease;
+        background-color: grey;
+    }
+    .dot.active {
+        background-color: rgb(65, 65, 65);
+    }
+    .dot .active{
+        box-shadow: 0px 0px 10px black;
     }
 
     .stats {
